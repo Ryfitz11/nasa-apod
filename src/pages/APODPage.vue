@@ -5,8 +5,13 @@
       <button type="submit">Get Images</button>
     </form>
     <img :src="apod.url" />
-    <a :href="apod.url" target="none" v-if="apod.media_type == 'video'">
-      {{ apod.url }}</a
+    <iframe
+      :src="apod.url"
+      height="300px"
+      width="500px"
+      v-if="apod.media_type == 'video'"
+    >
+      {{ apod.url }}</iframe
     >
   </div>
 </template>
